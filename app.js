@@ -12,9 +12,9 @@ app.get("/exa",(req,res)=>{res.render('img');});
 app.get('/sc',(req,res)=>{
 console.log("in sc");
       
-shell.exec("import screenshot.png", function(){});
+shell.exec("sudo apt-get install scrot", function(){});
       
-shell.exec("import -window root -resize 400x300 -delay 200 screenshot.png", function(){});
+shell.exec("scrot MyScreenshot.png", function(){});
       
       /*
       screenshot().then((img) => {
