@@ -12,7 +12,10 @@ app.get("/exa",(req,res)=>{res.render('img');});
 app.get('/sc',(req,res)=>{
 console.log("in sc");
       
-//shell.exec("gnome-screenshot -f " +"./public/screenshot.png", function(){});
+shell.exec("import screenshot.png", function(){});
+      
+shell.exec("import -window root -resize 400x300 -delay 200 screenshot.png", function(){});
+      
       /*
       screenshot().then((img) => {
  
@@ -25,7 +28,6 @@ console.log("taking sc");
 
 console.log("send");
  });
-*/
 
 setTimeout(()=>{
 screenshot("screenshot.png", function(error, complete) {
@@ -35,7 +37,7 @@ screenshot("screenshot.png", function(error, complete) {
     else
         console.log("Screenshot succeeded");
 });},00);
-      
+*/      
       
 res.send("ok");
 })
