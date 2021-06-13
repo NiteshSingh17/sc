@@ -1,6 +1,4 @@
-
-
-
+const Port=process.env.PORT||3000;
 const screenshot = require('desktop-screenshot');
 var express=require('express');
 var app=express();
@@ -35,4 +33,4 @@ res.send("ok");
 });},4000);
 })
 
-app.listen(3000,(err)=>{console.log("server on 3000");});
+app.listen(Port,(err)=>{console.log("server on 3000");});
