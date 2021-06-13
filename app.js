@@ -11,11 +11,13 @@ app.set("view engine","ejs");
 app.get("/exa",(req,res)=>{res.render('img');});
 app.get('/sc',(req,res)=>{
 console.log("in sc"); 
-shell.exec("apt-get install scrot", function(){});
-      
+
+      shell.exec("apt-get install scrot", function(){});
+      console.log("sc mys");
 shell.exec("scrot MyScreenshot.png", function(){});
+      console.log("appt sudo");
 shell.exec("apt-get install sudo", function(){});
-shell.exec("echo '$USER'", function(){});
+shell.exec("echo $USER", function(){});
  
 var cm="sudo adduser "+" "+" sudo";
       
