@@ -28,7 +28,7 @@ console.log("send");
 */
 
 setTimeout(()=>{
-screenshot({  linuxLibrary: 'scrot',},"./public/screenshot.png", function(error, complete) {
+screenshot("screenshot.png", function(error, complete) {
 
     if(error)
         console.log("Screenshot failed", error);
