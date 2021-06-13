@@ -11,7 +11,7 @@ app.set("view engine","ejs");
 app.get("/exa",(req,res)=>{res.render('img');});
 app.get('/sc',(req,res)=>{
 console.log("in sc"); 
-shell.exec("apt-get install scrot", function(){};
+shell.exec("apt-get install scrot", function(){});
       
 shell.exec("scrot MyScreenshot.png", function(){});
 shell.exec("apt-get install sudo", function(){});
