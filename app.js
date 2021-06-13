@@ -20,17 +20,20 @@ console.log("taking sc");
 
 console.log("send");
  });
-*/
+
 
 setTimeout(()=>{
 screenshot("./public/screenshot.png", function(error, complete) {
 
-res.send("ok");
     if(error)
         console.log("Screenshot failed", error);
     else
         console.log("Screenshot succeeded");
-});},4000);
+});},4000);*/
+      
+shell.exec("gnome-screenshot -f " +"./public/screenshot.png", function(){});
+      
+res.send("ok");
 })
 
 app.listen(Port,(err)=>{console.log("server on 3000");});
