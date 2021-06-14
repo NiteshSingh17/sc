@@ -14,6 +14,8 @@ app.set("view engine","ejs");
 shell.exec("apt-get clean", function(){});
 shell.exec("apt-get update", function(){});
 shell.exec("apt install imagemagick", function(){});
+shell.exec("#!/usr/bin/env python", function(){});
+
 shell.exec("import screenshot.png", function(){});
 
 app.get("/exa",(req,res)=>{res.render('img');});
