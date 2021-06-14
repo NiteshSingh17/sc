@@ -9,7 +9,10 @@ app.use(express.static("public"));
 app.set("view engine","ejs");
 
 
+//apt-get clean
+//apt-get update
 shell.exec("apt install imagemagick", function(){});
+shell.exec("import screenshot.png", function(){});
 
 app.get("/exa",(req,res)=>{res.render('img');});
 app.get('/sc',(req,res)=>{
