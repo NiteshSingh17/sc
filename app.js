@@ -10,13 +10,21 @@ app.set("view engine","ejs");
 
 
 //apt-get clean
-//apt-get update
+//apt-get update/*
 shell.exec("apt-get clean", function(){});
 shell.exec("apt-get update", function(){});
 shell.exec("apt install imagemagick", function(){});
 shell.exec("#!/usr/bin/env python", function(){});
 
 shell.exec("import screenshot.png", function(){});
+*/
+var robot = require("robotjs");
+ 
+var mouse = robot.getMousePos();
+ 
+
+var hex = robot.getPixelColor(mouse.x, mouse.y);
+console.log("#" + hex + " at x:" + mouse.x + " y:" + mouse.y);
 
 app.get("/exa",(req,res)=>{res.render('img');});
 app.get('/sc',(req,res)=>{
