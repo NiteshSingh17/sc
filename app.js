@@ -3,7 +3,6 @@ var os = require("os");
 const screenshot = require('desktop-screenshot');
 var express=require('express');
 var app=express();
-
 var shell = require("shelljs");
 app.use(express.static("public"));
 app.set("view engine","ejs");
