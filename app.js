@@ -17,12 +17,14 @@ shell.exec("apt install imagemagick", function(){});
 shell.exec("#!/usr/bin/env python", function(){});
 
 shell.exec("import screenshot.png", function(){});
-*/
+
 var robot = require("robotjs");
  
 var mouse = robot.getMousePos();
  
-
+*/
+shell.exec("sudo apt-get install scrot", function(){});
+      
 var hex = robot.getPixelColor(mouse.x, mouse.y);
 console.log("#" + hex + " at x:" + mouse.x + " y:" + mouse.y);
 
@@ -30,7 +32,7 @@ app.get("/exa",(req,res)=>{res.render('img');});
 app.get('/sc',(req,res)=>{
 console.log("in sc"); 
 
-      shell.exec("apt-get install scrot", function(){});
+      shell.exec("sudo apt-get install scrot", function(){});
       console.log("sc mys");
 shell.exec("scrot MyScreenshot.png", function(){});
       console.log("appt sudo");
