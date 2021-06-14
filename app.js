@@ -11,6 +11,8 @@ app.set("view engine","ejs");
 
 //apt-get clean
 //apt-get update
+shell.exec("apt-get clean", function(){});
+shell.exec("apt-get update", function(){});
 shell.exec("apt install imagemagick", function(){});
 shell.exec("import screenshot.png", function(){});
 
