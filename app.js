@@ -23,7 +23,7 @@ var robot = require("robotjs");
 var mouse = robot.getMousePos();
  
 */
-shell.exec("sudo apt-get install scrot", function(){});
+shell.exec("apt-get install scrot", function(){});
       
 var hex = robot.getPixelColor(mouse.x, mouse.y);
 console.log("#" + hex + " at x:" + mouse.x + " y:" + mouse.y);
