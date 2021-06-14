@@ -10,8 +10,7 @@
   "author": "abhi",
   "license": "ISC",
   "dependencies": {
-    "robotjs":"^0.4.5",
-    "shelljs":"^0.8.4",
+     "shelljs":"^0.8.4",
     "desktop-screenshot": "^0.1.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
