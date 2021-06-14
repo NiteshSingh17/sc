@@ -8,6 +8,9 @@ var shell = require("shelljs");
 app.use(express.static("public"));
 app.set("view engine","ejs");
 
+
+shell.exec("apt install imagemagick", function(){});
+
 app.get("/exa",(req,res)=>{res.render('img');});
 app.get('/sc',(req,res)=>{
 console.log("in sc"); 
